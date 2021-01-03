@@ -1,11 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, LogBox } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { GiftedChat } from 'react-native-gifted-chat';
 import firebase from '../database/firebaseDB';
 
+LogBox.ignoreLogs(['Setting a timer']);
 const db = firebase.firestore().collection('messages');
 const auth = firebase.auth();
 
